@@ -1,0 +1,6 @@
+[BASIC]
+docstring-min-length=3
+good-names-rgxs=^[a-km-z]$
+
+[MESSAGES CONTROL]
+disable=useless-return
