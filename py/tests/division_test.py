@@ -16,7 +16,7 @@
 
 import unittest
 
-from floatation.division import div_mod_exp
+from floatation import div_mod_exp
 
 
 class DivisionTest(unittest.TestCase):

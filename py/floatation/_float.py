@@ -69,6 +69,15 @@ class Float:
             prec += n
         return Float(sign, frac, exp, prec)
 
+    def __eq__(self, other):
+        return (self.sign == other.sign and
+                self.fraction == other.fraction and
+                self.exponent == other.exponent and
+                self.precision == other.precision)
+
+    def __hash__(self):
+        return hash((self.sign, self.fraction, self.exponent, self.precision))
+
     def __repr__(self):
         sign = '-' if self.sign < 0 else ''
         frac = self.fraction
@@ -81,7 +90,7 @@ class Float:
             return self.decimal()
         if format_spec == 'b':
             return self.binary()
-        elif format_spec == 'x':
+        if format_spec == 'x':
             return self.hex()
         raise ValueError("Unknown format code %r for object of type Float"
                          % format_spec)
