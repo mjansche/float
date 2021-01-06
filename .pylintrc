@@ -1,6 +1,7 @@
 [BASIC]
 docstring-min-length=3
 good-names-rgxs=^[a-km-z]$
+no-docstring-rgx=(^test_)|(.*Test$)
 
 [MESSAGES CONTROL]
 disable=useless-return
